@@ -12,8 +12,7 @@ plot_zone_heatmap <- function(firstName, lastName, startDate, endDate)
       hit = dplyr::if_else(
         events %in% c("single", "double", "triple", "home_run"),
         1,
-        0
-      )
+        0)
     )
 
   ggplot2::ggplot(data, ggplot2::aes(x = plate_x, y = plate_z, z = hit)) +
