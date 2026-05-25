@@ -18,7 +18,7 @@ plot_zone_heatmap(firstName, lastName, startDate, endDate, playerIndex = 1)
 \item{playerIndex}{A positive integer}
 }
 \value{
-A table with all players that match the input name, and a heatmap plot of the date-range data
+A table with all players that match the input name, and a heatmap plot of the specified time period data
 }
 \description{
 Plotting zone heatmap of batting average over specified time

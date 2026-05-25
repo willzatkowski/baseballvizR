@@ -6,7 +6,7 @@
 #' @param endDate A string formatted YYYY-MM-DD
 #' @param playerIndex A positive integer
 #'
-#' @returns A table with all players that match the input name, and a spray chart plot of the date-range data
+#' @returns A table with all players that match the input name, and a spray chart plot of the specified time period data
 #' @export
 #'
 #' @examples

@@ -18,7 +18,7 @@ plot_spray_chart(firstName, lastName, startDate, endDate, playerIndex = 1)
 \item{playerIndex}{A positive integer}
 }
 \value{
-A table with all players that match the input name, and a spray chart plot of the date-range data
+A table with all players that match the input name, and a spray chart plot of the specified time period data
 }
 \description{
 Plotting spray chart over specified time

@@ -1,3 +1,16 @@
+#' Calculate stats of hitter over specified time
+#'
+#' @param firstName A string
+#' @param lastName A string
+#' @param startDate A string formatted YYYY-MM-DD
+#' @param endDate A string formatted YYYY-MM-DD
+#' @param playerIndex A positive integer
+#'
+#' @returns The counting stats of a hitter over a specified period of time
+#' @export
+#'
+#' @examples
+#' calculate_hitter_profile("Aaron","Judge", "2024-05-19", "2025-06-05", playerIndex = 1)
 calculate_hitter_profile <- function(firstName, lastName, startDate, endDate, playerIndex)
 {
   playerID_df <- baseballr::playerid_lookup(last_name = lastName, first_name = firstName)
