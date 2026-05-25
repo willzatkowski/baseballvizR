@@ -1,8 +1,30 @@
-plot_zone_heatmap <- function(firstName, lastName, startDate, endDate)
+#' Plotting zone heatmap of batting average over specified time
+#'
+#' @param firstName A string
+#' @param lastName A string
+#' @param startDate A string formatted YYYY-MM-DD
+#' @param endDate A string formatted YYYY-MM-DD
+#' @param playerIndex A positive integer
+#'
+#' @returns A table with all players that match the input name, and a heatmap plot of the date-range data
+#' @export
+#'
+#' @examples
+#' plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+plot_zone_heatmap <- function(firstName, lastName, startDate, endDate, playerIndex = 1)
 {
   playerID_df <- baseballr::playerid_lookup(last_name = lastName, first_name = firstName)
+  print(playerID_df)
 
-  playerID <- playerID_df$mlbam_id[1]
+  if (nrow(playerID_df) == 0) {
+    stop("No players found.")
+  }
+
+  if (playerIndex > nrow(playerID_df)) {
+    stop("playerIndex exceeds number of matching players.")
+  }
+
+  playerID <- playerID_df$mlbam_id[playerIndex]
 
   data <- baseballr::statcast_search(start_date = startDate, end_date = endDate,
                              playerid = playerID)
