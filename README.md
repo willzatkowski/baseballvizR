@@ -26,7 +26,7 @@ devtools::install_github("ADC-405-S26/baseballvizR")
 There is no dataset added to this package. Each function in this package
 utilizes ‘baseballr’ functions to webscrape data every time a function
 in this package is run. Because each function scrapes the data on its
-own, ther eis no need for a dataset to run tests with.
+own, there is no need for a dataset to run tests with.
 
 ## Example
 
@@ -41,7 +41,7 @@ library(baseballvizR)
 ``` r
 plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:37:13 UTC
+#> ℹ Data updated: 2026-05-26 21:39:46 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
@@ -64,7 +64,7 @@ plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 ``` r
 plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:37:19 UTC
+#> ℹ Data updated: 2026-05-26 21:39:53 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
@@ -87,7 +87,7 @@ plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 ``` r
 calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:37:26 UTC
+#> ℹ Data updated: 2026-05-26 21:40:00 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>

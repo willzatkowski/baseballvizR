@@ -1,0 +1,36 @@
+---
+title: "Introduction to baseballvizR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to baseballvizR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The `baseballvizR` package provides convenience functions for some common tasks. To install this package from GitHub, use
+
+```{r, eval=FALSE}
+# install.packages("remotes")
+# install.packages("devtools")
+devtools::install_github("ADC-405-S26/baseballvizR")
+```
+
+Load the package using the following code.
+
+```{r setup}
+library(baseballvizR)
+```
+
+The package contains three functions
+
+* `plot_zone_heatmap`
+
+* `plot_spray_chart`
+* `calculate_hitter_profile`

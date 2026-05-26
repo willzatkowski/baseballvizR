@@ -32,7 +32,7 @@ devtools::install_github("ADC-405-S26/baseballvizR")
 
 ## No Dataset
 
-There is no dataset added to this package. Each function in this package utilizes 'baseballr' functions to webscrape data every time a function in this package is run. Because each function scrapes the data on its own, ther eis no need for a dataset to run tests with.
+There is no dataset added to this package. Each function in this package utilizes 'baseballr' functions to webscrape data every time a function in this package is run. Because each function scrapes the data on its own, there is no need for a dataset to run tests with.
 
 ## Example
 
