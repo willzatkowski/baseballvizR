@@ -1,0 +1,61 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# baseballvizR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of `baseballvizR` is to provide functions to easily digest baseball statistics taken from raw statcast data.
+
+## Installation
+
+You can install the development version of project from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+# install.packages("devtools")
+devtools::install_github("ADC-405-S26/baseballvizR")
+```
+
+## No Dataset
+
+There is no dataset added to this package. Each function in this package utilizes 'baseballr' functions to webscrape data every time a function in this package is run. Because each function scrapes the data on its own, ther eis no need for a dataset to run tests with.
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(baseballvizR)
+```
+
+#### plot_zone_heatmap example
+
+```{r}
+plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+```
+
+#### plot_spray_chart example
+
+```{r}
+plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+```
+
+#### calculate_hitter_profile example
+
+```{r}
+calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+```

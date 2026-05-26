@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
-calculate_hitter_profile <- function(firstName, lastName, startDate, endDate, playerIndex)
+calculate_hitter_profile <- function(firstName, lastName, startDate, endDate, playerIndex = 1)
 {
   checkmate::assert_number(playerIndex, lower = 0)
   checkmate::assert_string(firstName)

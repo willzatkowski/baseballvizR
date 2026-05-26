@@ -4,7 +4,13 @@
 \alias{calculate_hitter_profile}
 \title{Calculate stats of hitter over specified time}
 \usage{
-calculate_hitter_profile(firstName, lastName, startDate, endDate, playerIndex)
+calculate_hitter_profile(
+  firstName,
+  lastName,
+  startDate,
+  endDate,
+  playerIndex = 1
+)
 }
 \arguments{
 \item{firstName}{A string}
