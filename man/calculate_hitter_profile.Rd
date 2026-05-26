@@ -24,5 +24,5 @@ The counting stats of a hitter over a specified period of time
 Calculate stats of hitter over specified time
 }
 \examples{
-calculate_hitter_profile("Aaron","Judge", "2024-05-19", "2025-06-05", playerIndex = 1)
+calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 }

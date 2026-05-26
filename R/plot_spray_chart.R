@@ -7,12 +7,21 @@
 #' @param playerIndex A positive integer
 #'
 #' @returns A table with all players that match the input name, and a spray chart plot of the specified time period data
+#' @importFrom rlang .data
+#' @importFrom ggplot2 ggplot aes geom_point scale_y_reverse coord_fixed labs element_blank
+#' @importFrom baseballr playerid_lookup statcast_search
 #' @export
 #'
 #' @examples
 #' plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 plot_spray_chart <- function(firstName, lastName, startDate, endDate, playerIndex = 1)
 {
+  checkmate::assert_number(playerIndex, lower = 0)
+  checkmate::assert_string(firstName)
+  checkmate::assert_string(lastName)
+  checkmate::assert_date(startDate)
+  checkmate::assert_date(endDate)
+
   playerID_df <- baseballr::playerid_lookup(last_name = lastName, first_name = firstName)
   print(playerID_df)
 
@@ -29,10 +38,10 @@ plot_spray_chart <- function(firstName, lastName, startDate, endDate, playerInde
   data <- baseballr::statcast_search(start_date = startDate, end_date = endDate,
                                      playerid = playerID)
 
-  ggplot2::ggplot(data, ggplot2::aes(x = hc_x, y = hc_y)) +
+  ggplot2::ggplot(data, ggplot2::aes(x = .data$hc_x, y = .data$hc_y)) +
 
     ggplot2::geom_point(
-      ggplot2::aes(color = events),
+      ggplot2::aes(color = .data$events),
       alpha = 0.6,
       size = 2
     ) +

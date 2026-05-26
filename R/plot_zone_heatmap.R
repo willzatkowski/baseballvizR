@@ -7,12 +7,22 @@
 #' @param playerIndex A positive integer
 #'
 #' @returns A table with all players that match the input name, and a heatmap plot of the specified time period data
+#' @importFrom rlang .data
+#' @importFrom ggplot2 ggplot aes geom_rect stat_summary_2d scale_fill_gradient coord_fixed labs theme_minimal
+#' @importFrom baseballr playerid_lookup statcast_search
+#' @importFrom dplyr mutate if_else
 #' @export
 #'
 #' @examples
 #' plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 plot_zone_heatmap <- function(firstName, lastName, startDate, endDate, playerIndex = 1)
 {
+  checkmate::assert_number(playerIndex, lower = 0)
+  checkmate::assert_string(firstName)
+  checkmate::assert_string(lastName)
+  checkmate::assert_date(startDate)
+  checkmate::assert_date(endDate)
+
   playerID_df <- baseballr::playerid_lookup(last_name = lastName, first_name = firstName)
   print(playerID_df)
 
@@ -32,12 +42,12 @@ plot_zone_heatmap <- function(firstName, lastName, startDate, endDate, playerInd
   data <- data |>
     dplyr::mutate(
       hit = dplyr::if_else(
-        events %in% c("single", "double", "triple", "home_run"),
+        .data$events %in% c("single", "double", "triple", "home_run"),
         1,
         0)
     )
 
-  ggplot2::ggplot(data, ggplot2::aes(x = plate_x, y = plate_z, z = hit)) +
+  ggplot2::ggplot(data, ggplot2::aes(x = .data$plate_x, y = .data$plate_z, z = .data$hit)) +
     ggplot2::stat_summary_2d(
       fun = mean,
       bins = 30) +
