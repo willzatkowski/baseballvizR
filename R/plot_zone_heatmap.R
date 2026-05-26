@@ -20,8 +20,8 @@ plot_zone_heatmap <- function(firstName, lastName, startDate, endDate, playerInd
   checkmate::assert_number(playerIndex, lower = 0)
   checkmate::assert_string(firstName)
   checkmate::assert_string(lastName)
-  checkmate::assert_date(startDate)
-  checkmate::assert_date(endDate)
+  checkmate::assert_string(startDate)
+  checkmate::assert_string(endDate)
 
   playerID_df <- baseballr::playerid_lookup(last_name = lastName, first_name = firstName)
   print(playerID_df)

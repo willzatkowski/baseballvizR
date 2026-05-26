@@ -21,7 +21,7 @@ test_that("first and last name are spelled incorrectly or not added",{
   expect_error(plot_zone_heatmap("Jn","Soto", "2024-05-19", "2025-06-05", playerIndex = 6), "No players found.")
 
   # not declaring value for names
-  expect_error(plot_zone_heatmap("2024-05-19", "2025-06-05", playerIndex = 6), "No players found.")
+  expect_error(plot_zone_heatmap("2024-05-19", "2025-06-05", playerIndex = 6), 'argument "startDate" is missing, with no default')
 
 })
 

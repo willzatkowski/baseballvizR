@@ -21,7 +21,7 @@ test_that("first and last name are spelled incorrectly or not added",{
   expect_error(calculate_hitter_profile("Jn","Soto", "2024-05-19", "2025-06-05", playerIndex = 6), "No players found.")
 
   # not declaring value for names
-  expect_error(calculate_hitter_profile("2024-05-19", "2025-06-05", playerIndex = 6), "No players found.")
+  expect_error(calculate_hitter_profile("2024-05-19", "2025-06-05", playerIndex = 6), 'argument "startDate" is missing, with no default')
 
 })
 
