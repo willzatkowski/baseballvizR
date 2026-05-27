@@ -16,10 +16,13 @@ To use this package you must install the `devtools` package followed by
 the development version of `baseballr` in that order before you can
 install `baseballvizR`. If you do not install in this order, the
 functions will not run because they rely on the development version of
-`baseballr`. You can install the development version of `baseballvizR`
-from [GitHub](https://github.com/) with:
+`baseballr`. When installing the packages, it may notify you that there
+are available updates to the packages. You want to update all of them.
+You can install the development version of `baseballvizR` from
+[GitHub](https://github.com/) with:
 
 ``` r
+install.packages("remotes")
 install.packages("devtools")
 devtools::install_github("BillPetti/baseballr")
 devtools::install_github("ADC-405-S26/baseballvizR", force = TRUE)
@@ -45,7 +48,7 @@ library(baseballvizR)
 ``` r
 plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-27 01:43:38 UTC
+#> ℹ Data updated: 2026-05-27 01:55:33 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
@@ -68,7 +71,7 @@ plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 ``` r
 plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-27 01:43:44 UTC
+#> ℹ Data updated: 2026-05-27 01:55:40 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
@@ -91,7 +94,7 @@ plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 ``` r
 calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-27 01:43:50 UTC
+#> ℹ Data updated: 2026-05-27 01:55:46 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
