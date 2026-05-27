@@ -40,7 +40,7 @@ of the specified time period data
 ``` r
 plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:58:08 UTC
+#> ℹ Data updated: 2026-05-27 01:01:34 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
