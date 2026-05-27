@@ -10,6 +10,7 @@ To install this package from GitHub, use
 
 ``` r
 
+install.packages("remotes")
 install.packages("devtools")
 devtools::install_github("BillPetti/baseballr")
 devtools::install_github("ADC-405-S26/baseballvizR", force = TRUE)
