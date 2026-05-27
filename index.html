@@ -59,11 +59,11 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of project from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>To use this package you must install the <code>devtools</code> package followed by the development version of <code>baseballr</code> in that order before you can install <code>baseballvizR</code>. If you do not install in this order, the functions will not run because they rely on the development version of <code>baseballr</code>. You can install the development version of <code>baseballvizR</code> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ADC-405-S26/baseballvizR"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"BillPetti/baseballr"</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ADC-405-S26/baseballvizR"</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="no-dataset">No Dataset<a class="anchor" aria-label="anchor" href="#no-dataset"></a>
@@ -73,7 +73,7 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>This is a basic example which shows you how to display hitter data:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adc-405-s26.github.io/baseballvizR/">baseballvizR</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level4">
@@ -82,7 +82,7 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/plot_zone_heatmap.html">plot_zone_heatmap</a></span><span class="op">(</span><span class="st">"Juan"</span>,<span class="st">"Soto"</span>, <span class="st">"2024-05-19"</span>, <span class="st">"2025-06-05"</span>, playerIndex <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe</span></span>
-<span><span class="co">#&gt; ℹ Data updated: 2026-05-26 21:39:46 UTC</span></span>
+<span><span class="co">#&gt; ℹ Data updated: 2026-05-27 01:43:38 UTC</span></span>
 <span><span class="co">#&gt; # A tibble: 6 × 11</span></span>
 <span><span class="co">#&gt;   first_name last_name given_name   name_suffix nick_name birth_year</span></span>
 <span><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;          &lt;int&gt;</span></span>
@@ -104,7 +104,7 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/plot_spray_chart.html">plot_spray_chart</a></span><span class="op">(</span><span class="st">"Juan"</span>,<span class="st">"Soto"</span>, <span class="st">"2024-05-19"</span>, <span class="st">"2025-06-05"</span>, playerIndex <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe</span></span>
-<span><span class="co">#&gt; ℹ Data updated: 2026-05-26 21:39:53 UTC</span></span>
+<span><span class="co">#&gt; ℹ Data updated: 2026-05-27 01:43:44 UTC</span></span>
 <span><span class="co">#&gt; # A tibble: 6 × 11</span></span>
 <span><span class="co">#&gt;   first_name last_name given_name   name_suffix nick_name birth_year</span></span>
 <span><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;          &lt;int&gt;</span></span>
@@ -126,7 +126,7 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/calculate_hitter_profile.html">calculate_hitter_profile</a></span><span class="op">(</span><span class="st">"Juan"</span>,<span class="st">"Soto"</span>, <span class="st">"2024-05-19"</span>, <span class="st">"2025-06-05"</span>, playerIndex <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe</span></span>
-<span><span class="co">#&gt; ℹ Data updated: 2026-05-26 21:40:00 UTC</span></span>
+<span><span class="co">#&gt; ℹ Data updated: 2026-05-27 01:43:50 UTC</span></span>
 <span><span class="co">#&gt; # A tibble: 6 × 11</span></span>
 <span><span class="co">#&gt;   first_name last_name given_name   name_suffix nick_name birth_year</span></span>
 <span><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;          &lt;int&gt;</span></span>

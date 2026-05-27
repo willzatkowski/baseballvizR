@@ -5,14 +5,18 @@ baseball statistics taken from raw statcast data.
 
 ## Installation
 
-You can install the development version of project from
-[GitHub](https://github.com/) with:
+To use this package you must install the `devtools` package followed by
+the development version of `baseballr` in that order before you can
+install `baseballvizR`. If you do not install in this order, the
+functions will not run because they rely on the development version of
+`baseballr`. You can install the development version of `baseballvizR`
+from [GitHub](https://github.com/) with:
 
 ``` r
 
-# install.packages("remotes")
-# install.packages("devtools")
-devtools::install_github("ADC-405-S26/baseballvizR")
+install.packages("devtools")
+devtools::install_github("BillPetti/baseballr")
+devtools::install_github("ADC-405-S26/baseballvizR", force = TRUE)
 ```
 
 ## No Dataset
@@ -24,7 +28,7 @@ own, there is no need for a dataset to run tests with.
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to display hitter data:
 
 ``` r
 
@@ -37,7 +41,7 @@ library(baseballvizR)
 
 plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:39:46 UTC
+#> ℹ Data updated: 2026-05-27 01:43:38 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
@@ -61,7 +65,7 @@ plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 
 plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:39:53 UTC
+#> ℹ Data updated: 2026-05-27 01:43:44 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
@@ -85,7 +89,7 @@ plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 
 calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-26 21:40:00 UTC
+#> ℹ Data updated: 2026-05-27 01:43:50 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>
