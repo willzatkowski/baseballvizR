@@ -22,12 +22,12 @@ The goal of `baseballvizR` is to provide functions to easily digest baseball sta
 
 ## Installation
 
-You can install the development version of project from [GitHub](https://github.com/) with:
+To use this package you must install the `devtools` package followed by the development version of `baseballr` in that order before you can install `baseballvizR`. If you do not install in this order, the functions will not run because they rely on the development version of `baseballr`. You can install the development version of `baseballvizR` from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
-# install.packages("devtools")
-devtools::install_github("ADC-405-S26/baseballvizR")
+install.packages("devtools")
+devtools::install_github("BillPetti/baseballr")
+devtools::install_github("ADC-405-S26/baseballvizR", force = TRUE)
 ```
 
 ## No Dataset
@@ -36,7 +36,7 @@ There is no dataset added to this package. Each function in this package utilize
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to display hitter data:
 
 ```{r example}
 library(baseballvizR)
