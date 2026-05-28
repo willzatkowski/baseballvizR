@@ -40,7 +40,7 @@ plot of the specified time period data
 ``` r
 plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
 #> ── Player ID Lookup from the Chadwick Bureau's public register of baseball playe
-#> ℹ Data updated: 2026-05-27 01:59:17 UTC
+#> ℹ Data updated: 2026-05-28 18:26:57 UTC
 #> # A tibble: 6 × 11
 #>   first_name last_name given_name   name_suffix nick_name birth_year
 #>   <chr>      <chr>     <chr>        <chr>       <chr>          <int>

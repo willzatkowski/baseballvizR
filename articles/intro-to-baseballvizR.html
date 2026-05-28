@@ -82,7 +82,29 @@ just the raw data and start to see trends.</p>
 <li><p><code>plot_zone_heatmap</code></p></li>
 <li><p><code>plot_spray_chart</code></p></li>
 <li><p><code>calculate_hitter_profile</code></p></li>
-</ul></main>
+</ul>
+<div class="section level2">
+<h2 id="function-explanation">Function Explanation<a class="anchor" aria-label="anchor" href="#function-explanation"></a>
+</h2>
+<p>Each function makes use of a players first and last name, the start
+date and end date of the period you want to extract data from, and the
+player index. The player index is for when there is more than one player
+with the same name, and you need to choose between them. Every time you
+run the function, it will produce a table with every player that has the
+name name inputted in the function. You can adjust the player index to
+select one of these players.</p>
+<p>The first function <code>plot_zone_heatmap</code> takes a players
+data from a specified time period, and displays a heat map of batting
+average based on the pitches location.</p>
+<p>The second function <code>plot_spray_chart</code> takes a players
+data from a specified time period, and displays a spray chart of where
+the ball was hit. It then color codes each data point based on the
+outcome of the play.</p>
+<p>The third function <code>calculate_hitter_profile</code> takes a
+players data from a specified time period, and displays a table of all
+of the accumulated stats over that period.</p>
+</div>
+  </main>
 </div>
 
 

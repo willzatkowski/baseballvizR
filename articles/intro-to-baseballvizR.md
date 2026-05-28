@@ -30,3 +30,26 @@ The package contains three functions
 - `plot_spray_chart`
 
 - `calculate_hitter_profile`
+
+## Function Explanation
+
+Each function makes use of a players first and last name, the start date
+and end date of the period you want to extract data from, and the player
+index. The player index is for when there is more than one player with
+the same name, and you need to choose between them. Every time you run
+the function, it will produce a table with every player that has the
+name name inputted in the function. You can adjust the player index to
+select one of these players.
+
+The first function `plot_zone_heatmap` takes a players data from a
+specified time period, and displays a heat map of batting average based
+on the pitches location.
+
+The second function `plot_spray_chart` takes a players data from a
+specified time period, and displays a spray chart of where the ball was
+hit. It then color codes each data point based on the outcome of the
+play.
+
+The third function `calculate_hitter_profile` takes a players data from
+a specified time period, and displays a table of all of the accumulated
+stats over that period.
