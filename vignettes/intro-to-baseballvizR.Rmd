@@ -37,3 +37,25 @@ The package contains three functions
 
 * `plot_spray_chart`
 * `calculate_hitter_profile`
+
+## Example
+
+Here is an example of how to use each of these functions.
+
+The first function `plot_zone_heatmap` takes a players data from a specified time period, and displays a heat map of batting average based on the pitches location.
+
+```{r}
+plot_zone_heatmap("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+```
+
+The second function `plot_spray_chart` takes a players data from a specified time period, and displays a spray chart of where the ball was hit. It then color codes each data point based on the outcome of the play.
+
+```{r}
+plot_spray_chart("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+```
+
+The third function `calculate_hitter_profile` takes a players data from a specified time period, and displays a table of all of the accumulated stats over that period.
+
+```{r}
+calculate_hitter_profile("Juan","Soto", "2024-05-19", "2025-06-05", playerIndex = 6)
+```
