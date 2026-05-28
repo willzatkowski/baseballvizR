@@ -47,7 +47,7 @@ plot_zone_heatmap <- function(firstName, lastName, startDate, endDate, playerInd
         0)
     )
 
-  ggplot2::ggplot(data, ggplot2::aes(x = .data$plate_x, y = .data$plate_z, z = .data$hit)) +
+  plot <- ggplot2::ggplot(data, ggplot2::aes(x = .data$plate_x, y = .data$plate_z, z = .data$hit)) +
     ggplot2::stat_summary_2d(
       fun = mean,
       bins = 30) +
@@ -70,5 +70,7 @@ plot_zone_heatmap <- function(firstName, lastName, startDate, endDate, playerInd
       fill = "Batting Average"
     ) +
     ggplot2::theme_minimal()
+
+  return(plot)
 
 }

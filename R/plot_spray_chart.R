@@ -38,7 +38,7 @@ plot_spray_chart <- function(firstName, lastName, startDate, endDate, playerInde
   data <- baseballr::statcast_search(start_date = startDate, end_date = endDate,
                                      playerid = playerID)
 
-  ggplot2::ggplot(data, ggplot2::aes(x = .data$hc_x, y = .data$hc_y)) +
+  plot <- ggplot2::ggplot(data, ggplot2::aes(x = .data$hc_x, y = .data$hc_y)) +
 
     ggplot2::geom_point(
       ggplot2::aes(color = .data$events),
@@ -62,4 +62,5 @@ plot_spray_chart <- function(firstName, lastName, startDate, endDate, playerInde
       axis.title = ggplot2::element_blank()
 
     )
+  return(plot)
 }
