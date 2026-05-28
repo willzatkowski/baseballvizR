@@ -40,7 +40,9 @@ The package contains three functions
 
 ## Example
 
-Here is an example of how to use each of these functions.
+Here is an example of how to use each of these functions. 
+
+Each function makes use of a players first and last name, the start date and end date of the period you want to extract data from, and the player index. The player index is for when there is more than one player with the same name, and you need to choose between them. Every time you run the function, it will produce a table with every player that has the name name inputted in the function. You can adjust the player index to select one of these players.
 
 The first function `plot_zone_heatmap` takes a players data from a specified time period, and displays a heat map of batting average based on the pitches location.
 
